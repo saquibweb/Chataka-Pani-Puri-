@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chataka Pani Puri</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-font-family:'Poppins',sans-serif;
-background:#fffaf5;
+font-family:'Outfit',sans-serif;
+background:linear-gradient(135deg,#fff6ec,#ffe9d6);
+color:#222;
 scroll-behavior:smooth;
-color:#333;
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -21,138 +22,120 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-background:white;
-box-shadow:0 3px 15px rgba(0,0,0,0.05);
+padding:20px 60px;
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
-
 .logo{
-font-size:24px;
+font-size:30px;
 font-weight:800;
 color:#ff4d00;
 }
-
 nav a{
-margin-left:20px;
+margin-left:30px;
 text-decoration:none;
-color:#333;
-font-weight:500;
+font-weight:600;
+color:#444;
 transition:.3s;
 }
-
 nav a:hover{color:#ff4d00}
 
 /* HERO */
 .hero{
-height:85vh;
+height:95vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('https://images.unsplash.com/photo-1625944525533-473f1b7e0b3d');
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1625944525533-473f1b7e0b3d?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
 color:white;
 padding:20px;
 }
-
 .hero h1{
-font-size:48px;
-animation:fadeIn 1.5s ease-in-out;
+font-size:60px;
+font-weight:800;
 }
-
 .hero p{
-margin:15px 0;
-font-size:20px;
+margin-top:20px;
+font-size:22px;
+opacity:.9;
 }
-  <section id="menu">
-<h2 style="text-align:center;margin-bottom:40px;">Our Menu 🍽️</h2>
-
-<div class="gallery">
-<div class="card">Classic Pani Puri – ₹30</div>
-<div class="card">Special Mint Blast – ₹40</div>
-<div class="card">Imli Special – ₹40</div>
-<div class="card">Cheese Pani Puri – ₹50</div>
-<div class="card">Dahi Puri – ₹50</div>
-<div class="card">Party Unlimited Package – ₹199 / person</div>
-</div>
-</section>
 
 .btn{
-background:linear-gradient(45deg,#ff4d00,#ff9900);
-color:white;
-padding:14px 28px;
-border:none;
-border-radius:40px;
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+border-radius:50px;
 text-decoration:none;
 font-weight:600;
 transition:.3s;
-display:inline-block;
-margin-top:15px;
+}
+.btn-primary{
+background:linear-gradient(45deg,#ff4d00,#ff9900);
+color:white;
+box-shadow:0 10px 30px rgba(255,77,0,.4);
+}
+.btn-primary:hover{
+transform:translateY(-5px);
 }
 
-.btn:hover{transform:scale(1.05)}
-
+/* SECTION */
 section{
-padding:70px 20px;
+padding:100px 20px;
 max-width:1200px;
 margin:auto;
+animation:fadeUp 1s ease forwards;
+}
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+color:#ff4d00;
+}
+
+/* GLASS CARD */
+.glass{
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+transition:.4s;
+}
+.glass:hover{
+transform:translateY(-10px);
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 /* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
 .gallery img{
 width:100%;
-border-radius:20px;
+border-radius:25px;
 transition:.4s;
 }
-
 .gallery img:hover{
-transform:scale(1.05);
-}
-<section id="hygiene">
-<h2 style="text-align:center;margin-bottom:40px;">Our Hygiene Promise 🧼</h2>
-
-<div class="gallery">
-<div class="card">✔ RO Water Used</div>
-<div class="card">✔ Gloves & Hair Cover</div>
-<div class="card">✔ Fresh Ingredients Daily</div>
-<div class="card">✔ Clean Serving Counter</div>
-</div>
-</section>
-/* OWNER SECTION */
-.owner{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:40px;
-}
-
-.owner img{
-width:300px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.owner-text{
-flex:1;
+transform:scale(1.07);
 }
 
 /* MAP */
 iframe{
 width:100%;
-height:350px;
-border-radius:20px;
+height:400px;
+border-radius:25px;
 border:none;
 }
 
@@ -160,31 +143,55 @@ border:none;
 footer{
 background:#111;
 color:white;
-padding:40px 20px;
 text-align:center;
+padding:60px 20px;
 }
-
 footer a{
 color:#ff9900;
+margin:0 15px;
 text-decoration:none;
-margin:0 10px;
 }
 
-/* WHATSAPP FLOAT */
+/* FLOATING BAR */
+.floating-bar{
+position:fixed;
+bottom:0;
+width:100%;
+background:#ff4d00;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:15px;
+font-weight:600;
+z-index:999;
+}
+.floating-bar a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+background:white;
+color:#ff4d00;
+padding:8px 20px;
+border-radius:30px;
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
-bottom:20px;
+bottom:80px;
 right:20px;
-background:#25D366;
+background:#0084ff;
 color:white;
-padding:15px;
+padding:18px;
 border-radius:50%;
 font-size:22px;
 text-decoration:none;
+box-shadow:0 10px 25px rgba(0,132,255,.5);
 }
 
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(30px)}
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(50px)}
 to{opacity:1;transform:translateY(0)}
 }
 </style>
@@ -195,80 +202,85 @@ to{opacity:1;transform:translateY(0)}
 <header>
 <div class="logo">Chataka 🔥</div>
 <nav>
+<a href="#menu">Menu</a>
+<a href="#hygiene">Hygiene</a>
 <a href="#gallery">Gallery</a>
-<a href="#owner">Founder</a>
-<a href="#location">Location</a>
-<a href="#contact">Contact</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Visit</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>Muzaffarpur Ki Sabse Chatpati Pani Puri 😋</h1>
-<p>Fresh • Hygienic • Premium Taste Experience</p>
-<a class="btn" href="https://wa.me/917318097613?text=Hi%20Chataka!%20I%20want%20to%20order%20pani%20puri." target="_blank">Order Now</a>
+<h1>Premium Pani Puri Experience 😋</h1>
+<p>Fresh • Hygienic • Unlimited Taste</p>
+<a class="btn btn-primary" href="https://wa.me/917318097613?text=Hi%20Chataka!%20I%20want%20to%20order." target="_blank">Order Now</a>
+</section>
+
+<section id="menu">
+<h2 class="section-title">Our Menu 🍽️</h2>
+<div class="grid">
+<div class="glass">Classic Pani Puri – ₹30</div>
+<div class="glass">Mint Blast – ₹40</div>
+<div class="glass">Imli Special – ₹40</div>
+<div class="glass">Cheese Pani Puri – ₹50</div>
+<div class="glass">Dahi Puri – ₹50</div>
+<div class="glass">Unlimited Party Package – ₹199/person</div>
+</div>
+</section>
+
+<section id="hygiene">
+<h2 class="section-title">Hygiene Promise 🧼</h2>
+<div class="grid">
+<div class="glass">✔ RO Water Used</div>
+<div class="glass">✔ Gloves & Hair Cover</div>
+<div class="glass">✔ Fresh Ingredients Daily</div>
+<div class="glass">✔ Sanitized Counter</div>
+</div>
 </section>
 
 <section id="gallery">
-<h2 style="text-align:center;margin-bottom:40px;">Our Delicious Gallery 😍</h2>
-<div class="gallery">
-<img src="pani1.jpg">
-<img src="pani2.jpg">
-<img src="pani3.jpg">
-<img src="https://images.unsplash.com/photo-1626500155530-7f9c9b5a2b0f">
-</div>
-</section>
-
-<section id="owner">
-<h2 style="text-align:center;margin-bottom:40px;">Meet The Founder 👑</h2>
-<div class="owner">
-<img src="owner.jpg" alt="Owner Image">
-<div class="owner-text">
-<h3>Passion Behind Chataka</h3>
-<p>With years of dedication and love for authentic street flavors, our founder built Chataka to bring hygienic and premium pani puri experience to Muzaffarpur.</p>
-<a class="btn" href="https://wa.me/917318097613?text=Hello%20I%20would%20like%20to%20enquire%20about%20catering%20services." target="_blank">Enquiry Now</a>
-</div>
+<h2 class="section-title">Gallery 😍</h2>
+<div class="grid gallery">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1626500155530-7f9c9b5a2b0f?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1625944525533-473f1b7e0b3d?auto=format&fit=crop&w=800&q=80">
 </div>
 </section>
 
 <section id="reviews">
-<h2 style="text-align:center;margin-bottom:40px;">What People Say ❤️</h2>
-
-<div class="gallery">
-<div class="card">★★★★★ <br> "Best pani puri in Muzaffarpur!" – Riya S.</div>
-<div class="card">★★★★★ <br> "Very hygienic & tasty." – Amit K.</div>
-<div class="card">★★★★★ <br> "Catering service amazing!" – Rohit D.</div>
+<h2 class="section-title">What People Say ❤️</h2>
+<div class="grid">
+<div class="glass">★★★★★<br>Best pani puri in Muzaffarpur!</div>
+<div class="glass">★★★★★<br>Very hygienic & tasty.</div>
+<div class="glass">★★★★★<br>Amazing catering service!</div>
 </div>
 </section>
-<section id="location">
-<h2 style="text-align:center;margin-bottom:30px;">Find Us Here 📍</h2>
 
+<section id="contact">
+<h2 class="section-title">Visit Us 📍</h2>
 <iframe src="https://www.google.com/maps?q=The%20Grand%20Mall%20Muzaffarpur&output=embed"></iframe>
-
 <p style="text-align:center;margin-top:20px;">
-The Grand Mall, near Baligarh Garden Road, Mithanpura, Muzaffarpur, Bihar 842002
+The Grand Mall, Mithanpura, Muzaffarpur, Bihar 842002
 </p>
-
 <div style="text-align:center;">
-<a class="btn" href="https://maps.app.goo.gl/fMftyuJKuRSvY6BA8" target="_blank">Get Directions</a>
+<a class="btn btn-primary" href="https://wa.me/917318097613?text=Hello%20Chataka!%20I%20want%20to%20book%20catering." target="_blank">Book Catering</a>
 </div>
-</section>
-
-<section id="contact" style="text-align:center;">
-<h2>Book Catering 🎉</h2>
-<p>Birthday • Wedding • Corporate Events</p>
-<a class="btn" href="https://wa.me/917318097613?text=Hello%20Chataka!%20I%20want%20to%20book%20catering%20service." target="_blank">Book Now</a>
-<p style="margin-top:20px;">📞 <a href="tel:7318097613">7318097613</a></p>
+<p style="text-align:center;margin-top:20px;font-weight:600;">
+📞 <a href="tel:7318097613">7318097613</a>
+</p>
 </section>
 
 <footer>
-<p>Quick Links</p>
+<a href="#menu">Menu</a>
 <a href="#gallery">Gallery</a>
-<a href="#owner">Founder</a>
-<a href="#location">Location</a>
 <a href="#contact">Contact</a>
-
 <p style="margin-top:20px;">© 2026 Chataka Pani Puri</p>
 </footer>
+
+<div class="floating-bar">
+Book Catering Now
+<a href="https://wa.me/917318097613?text=Hi%20Chataka!%20I%20want%20to%20book%20catering." target="_blank">Enquiry</a>
+</div>
 
 <a class="whatsapp" href="https://wa.me/917318097613?text=Hi%20Chataka!" target="_blank">💬</a>
 
