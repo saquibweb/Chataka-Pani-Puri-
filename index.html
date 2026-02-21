@@ -1,61 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Chataka Pani Puri</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fff8e1;
-            text-align: center;
-        }
-        header {
-            background: #ff6f00;
-            color: white;
-            padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .hero {
-            padding: 40px 20px;
-        }
-        .hero h1 {
-            color: #d84315;
-            font-size: 32px;
-        }
-        .btn {
-            background: #ff6f00;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 15px;
-            margin-top: 40px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chataka Pani Puri</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Poppins',sans-serif;
+background:#fffaf5;
+scroll-behavior:smooth;
+color:#333;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+box-shadow:0 3px 15px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+color:#ff4d00;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{color:#ff4d00}
+
+/* HERO */
+.hero{
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1601050690597-df0568f70950');
+background-size:cover;
+background-position:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:48px;
+animation:fadeIn 1.5s ease-in-out;
+}
+
+.hero p{
+margin:15px 0;
+font-size:20px;
+}
+
+.btn{
+background:linear-gradient(45deg,#ff4d00,#ff9900);
+color:white;
+padding:14px 28px;
+border:none;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+display:inline-block;
+margin-top:15px;
+}
+
+.btn:hover{transform:scale(1.05)}
+
+section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* OWNER SECTION */
+.owner{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
+}
+
+.owner img{
+width:300px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.owner-text{
+flex:1;
+}
+
+/* MAP */
+iframe{
+width:100%;
+height:350px;
+border-radius:20px;
+border:none;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+footer a{
+color:#ff9900;
+text-decoration:none;
+margin:0 10px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    Chataka Pani Puri
+<div class="logo">Chataka 🔥</div>
+<nav>
+<a href="#gallery">Gallery</a>
+<a href="#owner">Founder</a>
+<a href="#location">Location</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<div class="hero">
-    <h1>Welcome to the Taste of Real Chataka!</h1>
-    <p>Fresh • Spicy • Hygienic • Affordable</p>
-    <a href="tel:+919999999999" class="btn">Order Now</a>
+<section class="hero">
+<h1>Muzaffarpur Ki Sabse Chatpati Pani Puri 😋</h1>
+<p>Fresh • Hygienic • Premium Taste Experience</p>
+<a class="btn" href="https://wa.me/917318097613?text=Hi%20Chataka!%20I%20want%20to%20order%20pani%20puri." target="_blank">Order Now</a>
+</section>
+
+<section id="gallery">
+<h2 style="text-align:center;margin-bottom:40px;">Our Delicious Gallery 😍</h2>
+<div class="gallery">
+<img src="pani1.jpg">
+<img src="pani2.jpg">
+<img src="pani3.jpg">
+<img src="https://images.unsplash.com/photo-1626500155530-7f9c9b5a2b0f">
 </div>
+</section>
+
+<section id="owner">
+<h2 style="text-align:center;margin-bottom:40px;">Meet The Founder 👑</h2>
+<div class="owner">
+<img src="owner.jpg" alt="Owner Image">
+<div class="owner-text">
+<h3>Passion Behind Chataka</h3>
+<p>With years of dedication and love for authentic street flavors, our founder built Chataka to bring hygienic and premium pani puri experience to Muzaffarpur.</p>
+<a class="btn" href="https://wa.me/917318097613?text=Hello%20I%20would%20like%20to%20enquire%20about%20catering%20services." target="_blank">Enquiry Now</a>
+</div>
+</div>
+</section>
+
+<section id="location">
+<h2 style="text-align:center;margin-bottom:30px;">Find Us Here 📍</h2>
+
+<iframe src="https://www.google.com/maps?q=The%20Grand%20Mall%20Muzaffarpur&output=embed"></iframe>
+
+<p style="text-align:center;margin-top:20px;">
+The Grand Mall, near Baligarh Garden Road, Mithanpura, Muzaffarpur, Bihar 842002
+</p>
+
+<div style="text-align:center;">
+<a class="btn" href="https://maps.app.goo.gl/fMftyuJKuRSvY6BA8" target="_blank">Get Directions</a>
+</div>
+</section>
+
+<section id="contact" style="text-align:center;">
+<h2>Book Catering 🎉</h2>
+<p>Birthday • Wedding • Corporate Events</p>
+<a class="btn" href="https://wa.me/917318097613?text=Hello%20Chataka!%20I%20want%20to%20book%20catering%20service." target="_blank">Book Now</a>
+<p style="margin-top:20px;">📞 <a href="tel:7318097613">7318097613</a></p>
+</section>
 
 <footer>
-    © 2026 Chataka Pani Puri | All Rights Reserved
+<p>Quick Links</p>
+<a href="#gallery">Gallery</a>
+<a href="#owner">Founder</a>
+<a href="#location">Location</a>
+<a href="#contact">Contact</a>
+
+<p style="margin-top:20px;">© 2026 Chataka Pani Puri</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/917318097613?text=Hi%20Chataka!" target="_blank">💬</a>
 
 </body>
 </html>
